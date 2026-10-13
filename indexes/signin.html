@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin - הרשמה </title>
+    <link rel="stylesheet" href="../styles/all.css">
+    <link rel="stylesheet" href="../styles/signin.css">
+</head>
+
+<body class="page-signin">
+    <header></header>
+
+    <main class="form">
+        <form id="signin">
+            <h2>הרשמה לקהל הלקוחות / לקהל העובדים</h2>
+
+            <label for="firstName">שם פרטי</label>
+            <input id="firstName" name="firstName" placeholder="הכנס שם פרטי" required />
+
+            <label for="lastName">שם משפחה</label>
+            <input id="lastName" name="lastName" placeholder="הכנס שם משפחה" required />
+
+            <label for="phone">טלפון</label>
+            <input id="phone" name="phone" placeholder="מס טלפון" type="tel" dir="rtl" />
+
+            <label for="Tz">תעודת זהות</label>
+            <input id="Tz" name="tz" placeholder="תעודת זהות" required />
+
+            <label for="Email">דוא"ל</label>
+            <input id="Email" name="email" placeholder="כתובת מייל" type="email" required />
+
+            <label for="adress">כתובת</label>
+            <input id="adress" name="adress" placeholder="כתובת מגורים" />
+
+            <label for="password">סיסמא</label>
+            <input id="password" name="password" placeholder="הכנס סיסמא" type="password" required />
+
+            <label for="confirmPassword">אישור סיסמא</label>
+            <input id="confirmPassword" name="confirmPassword" type="password" placeholder="אשר את הסיסמא" required />
+
+            <label for="adminPassword">קוד מנהל (למנהלים/לעובדים בלבד)</label>
+            <input id="adminPassword" name="adminPassword" placeholder="הכנס קוד מנהל" type="password">
+            <button type="submit">הרשמה</button>
+            
+            <p>כבר יש לך חשבון? <a href="./login.html">התחבר כאן</a></p>
+        </form>
+    </main>
+
+    <footer></footer>
+    <script src="../scripts/data.js"></script>
+    <script src="../scripts/ls.js"></script>
+    <script src="../scripts/services.js"></script>
+    <script src="../scripts/header-footer.js"></script>
+    <script src="../scripts/signin.js"></script>
+</body>
+
+</html>

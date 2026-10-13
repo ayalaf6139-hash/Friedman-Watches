@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>קטלוג - Friedman Watches</title>
+    <link rel="stylesheet" href="../styles/all.css">
+    <link rel="stylesheet" href="../styles/katalog.css">
+</head>
+
+<body>
+    <header></header>
+
+    <section class="catalog-toolbar">
+        <input type="search" name="search" id="search" placeholder="חפש לפי מותג, דגם או תיאור...">
+
+        <div class="filter-buttons">
+            <button type="button" class="filter-btn active" data-category="all">הכל</button>
+            <button type="button" class="filter-btn" data-category="ילדים">שעונים לילדים</button>
+            <button type="button" class="filter-btn" data-category="גברים">שעונים לגברים</button>
+            <button type="button" class="filter-btn" data-category="נשים">שעונים לנשים</button>
+        </div>
+
+        <div class="toolbar-row">
+            <select id="sort" aria-label="מיון"></select>
+
+            <div class="cart-info">
+                <span>סל הקניות: <span class="cart-count">0</span> פריטים</span>
+                <a href="cart.html" class="view-cart-btn">🛒 צפה בסל</a>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <h1 class="title_katalog">קטלוג שעונים</h1>
+        <div class="watches-grid" id="watchesContainer"></div>
+    </main>
+    <footer></footer>
+
+    <script src="../scripts/data.js"></script>
+    <script src="../scripts/ls.js"></script>
+    <script src="../scripts/services.js"></script>
+    <script src="../scripts/ui.js"></script>
+    <script src="../scripts/header-footer.js"></script>
+    <script src="../scripts/katalog.js"></script>
+</body>
+
+</html>

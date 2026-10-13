@@ -1,0 +1,190 @@
+.form-wrapper {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.payment-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 650px;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-sizing: border-box;
+}
+
+.payment-card h1 {
+  font-family: 'Baloo 2', cursive;
+  color: #bfa77a;
+  text-align: center;
+  margin-bottom: 28px;
+  font-size: 1.8rem;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.form-group label {
+  font-family: 'Baloo 2', cursive;
+  color: #bfa77a;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid #bfa77a;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #222;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+}
+
+.submit-btn {
+  font-family: 'Baloo 2', cursive;
+  width: 100%;
+  padding: 14px;
+  border-radius: 50px;
+  background: #bfa77a;
+  color: #ffffff;
+  border: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.15s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submit-btn:hover {
+  background: #d4af37;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.25);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+.form-group select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid #bfa77a;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #222;
+  font-size: 1rem;
+  outline: none;
+}
+
+.method-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.method-note {
+  color: #6b5a33;
+  text-align: center;
+  margin: 0;
+}
+
+/* חשבונית */
+.invoice {
+  color: #222;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 28px;
+}
+
+.invoice h2 {
+  font-family: 'Baloo 2', cursive;
+  color: #bfa77a;
+  text-align: center;
+  margin: 0 0 16px;
+}
+
+.invoice-line {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 0;
+}
+
+.invoice-customer {
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0;
+}
+
+.invoice-table th,
+.invoice-table td {
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 8px;
+  text-align: right;
+}
+
+.invoice-table th {
+  background-color: rgba(212, 175, 55, 0.12);
+  color: #6b5a33;
+}
+
+.invoice-total {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #bfa77a;
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+  margin-top: 6px;
+  padding-top: 8px;
+}
+
+.message {
+  text-align: center;
+  font-weight: 700;
+  margin-top: 16px;
+}
+
+.message-error {
+  color: #c30f0f;
+}
+
+.message-success {
+  color: #3d8b40;
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

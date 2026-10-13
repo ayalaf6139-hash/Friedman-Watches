@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>סל הקניות - Friedman Watches</title>
+    <link rel="stylesheet" href="../styles/all.css">
+    <link rel="stylesheet" href="../styles/cart.css">
+</head>
+<body>
+    <header></header>
+
+    <div class="cart-container">
+        <h1>🛒 סל הקניות שלי</h1>
+
+        <div class="cart-items" id="cartItems"></div>
+
+        <div class="cart-summary" id="cartSummary" hidden>
+            <div class="summary-row">
+                <span>סה"כ פריטים:</span>
+                <span id="totalItems">0</span>
+            </div>
+            <div class="summary-row">
+                <span>מחיר לפני מע"מ:</span>
+                <span id="totalPrice">₪0</span>
+            </div>
+            <div class="summary-row">
+                <span>מע"מ (<span id="vatRate"></span>%):</span>
+                <span id="vatAmount">₪0</span>
+            </div>
+            <div class="summary-row total">
+                <span>סכום סופי:</span>
+                <span id="finalPrice">₪0</span>
+            </div>
+
+            <div class="action-buttons">
+                <button type="button" class="btn btn-primary" id="checkoutBtn">תשלום</button>
+                <button type="button" class="btn btn-secondary" id="continueBtn">המשך קניות</button>
+                <button type="button" class="btn btn-danger" id="clearCartBtn">איפוס סל</button>
+            </div>
+        </div>
+    </div>
+
+    <footer></footer>
+
+    <script src="../scripts/data.js"></script>
+    <script src="../scripts/ls.js"></script>
+    <script src="../scripts/services.js"></script>
+    <script src="../scripts/ui.js"></script>
+    <script src="../scripts/header-footer.js"></script>
+    <script src="../scripts/cart.js"></script>
+</body>
+</html>

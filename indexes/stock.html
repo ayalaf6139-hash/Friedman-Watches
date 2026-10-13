@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock - ניהול מלאי</title>
+    <link rel="stylesheet" href="../styles/all.css">
+    <link rel="stylesheet" href="../styles/stock.css">
+</head>
+
+<body>
+    <header></header>
+
+    <div class="container">
+        <main class="form">
+            <div class="form-card" id="add-watch">
+                <form id="form" novalidate>
+                    <h3 id="formTitle">הוספת שעון חדש</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="brand">מותג השעון:</label>
+                            <input type="text" id="brand" name="brand" required placeholder="לדוגמה: CASIO">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="model">דגם:</label>
+                            <input type="text" id="model" name="model" required placeholder="לדוגמה: MTP-F91">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="item-price">מחיר שעון (₪):</label>
+                            <input type="number" id="item-price" name="price" step="0.01" min="0" required placeholder="299.99">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="stock-qty">כמות במלאי:</label>
+                            <input type="number" id="stock-qty" name="qtyStock" required min="0" placeholder="10">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="category">קטגוריה:</label>
+                            <select id="category" name="category" class="typeWatch" required>
+                                <option value="" disabled selected>בחר קטגוריה</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">תיאור:</label>
+                            <input type="text" id="description" name="description" placeholder="לדוגמה: 10ATM - נגד מים">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="image">נתיב לתמונה:</label>
+                            <input type="text" id="image" name="image" placeholder="לדוגמה: ../images/casio.png">
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" id="saveBtn">שמור שעון</button>
+                            <button type="button" id="cancelBtn" hidden>ביטול</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <section class="list-section">
+            <h2>ניהול ומעקב מלאי שעונים</h2>
+            <div id="watchesContainer" class="stock-container"></div>
+        </section>
+    </div>
+
+    <footer></footer>
+
+    <script src="../scripts/data.js"></script>
+    <script src="../scripts/ls.js"></script>
+    <script src="../scripts/services.js"></script>
+    <script src="../scripts/ui.js"></script>
+    <script src="../scripts/header-footer.js"></script>
+    <script src="../scripts/stock.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+/* סרגל כלים: חיפוש, סינון, מיון וסל הקניות - בהתאמה לעיצוב השחור-זהב של האתר */
+.catalog-toolbar {
+    max-width: 900px;
+    margin: 10px auto 20px;
+    padding: 22px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    background: radial-gradient(circle at top, rgba(212, 175, 55, 0.08), transparent 70%);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.08);
+}
+
+#search {
+    display: block;
+    width: 100%;
+    max-width: 440px;
+    padding: 12px 46px 12px 20px;
+    font-size: 16px;
+    color: var(--text);
+    background-color: var(--bg);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23d4af37' viewBox='0 0 16 16'><path d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 16px) center;
+    background-size: 18px;
+    border: 1px solid var(--gold);
+    border-radius: 999px;
+    outline: none;
+    box-shadow: inset 0 0 0 1px rgba(212, 175, 55, 0.25);
+    transition: box-shadow 0.2s ease;
+}
+
+#search:focus {
+    box-shadow: inset 0 0 0 1px rgba(212, 175, 55, 0.25), 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+#search::placeholder {
+    color: var(--muted);
+    opacity: 0.7;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn,
+#sort,
+.view-cart-btn {
+    padding: 9px 20px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--gold);
+    background-color: transparent;
+    border: 1px solid var(--gold);
+    border-radius: 999px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: inset 0 0 0 1px rgba(212, 175, 55, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.filter-btn:hover,
+#sort:hover,
+.view-cart-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: inset 0 0 0 1px rgba(212, 175, 55, 0.25), 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.filter-btn.active,
+.view-cart-btn {
+    background-color: var(--gold);
+    color: var(--bg);
+}
+
+.view-cart-btn:hover {
+    background-color: transparent;
+    color: var(--gold);
+}
+
+#sort {
+    background-color: var(--bg);
+    outline: none;
+}
+
+#sort option {
+    background-color: var(--bg);
+    color: var(--gold);
+}
+
+.toolbar-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+}
+
+.cart-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.cart-count {
+    display: inline-block;
+    min-width: 28px;
+    padding: 2px 8px;
+    border: 1px solid var(--gold);
+    border-radius: 999px;
+    color: var(--gold);
+    font-weight: 700;
+    text-align: center;
+}
+
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--muted);
+    font-size: 18px;
+}
+
+.watch-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.add-to-cart-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* כרטיסי השעונים */
+.watches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 5cm);
+    gap: 15px;
+    padding: 20px;
+    justify-content: center; 
+}
+.watch-card {
+    width: 5cm;
+    height: 8cm;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #000;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+    overflow: hidden;
+    font-family: 'Fredoka', 'Trebuchet MS', sans-serif;
+}
+
+.watch-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.watch-image {
+    width: 100%;
+    height: 4.2cm;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.watch-brand {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--gold);
+    margin: 2px 0;
+    text-transform: uppercase;
+}
+
+.watch-name,
+.watch-model {
+    font-size: 13px;
+    font-weight: 600;
+    color: #f8f9fa;
+    margin: 2px 0;
+}
+
+.watch-price {
+    font-size: 15px;
+    color: var(--red);
+    font-weight: 700;
+    margin: 4px 0;
+}
+
+.watch-description {
+    font-size: 10px;
+    color: #aaa;
+    margin-bottom: 6px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    padding: 6px 10px;
+    background-color: transparent;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Fredoka', 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: var(--gold);
+    color: #000;
+}
+
+.add-to-cart-btn:active {
+    opacity: 0.8;
+}
+.add-to-cart-btn:disabled:hover {
+    background-color: transparent;
+    color: var(--gold);
+}

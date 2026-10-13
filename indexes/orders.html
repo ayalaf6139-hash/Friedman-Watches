@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ניהול הזמנות לקוחות</title>
+    <link rel="stylesheet" href="../styles/all.css">
+    <link rel="stylesheet" href="../styles/orders.css">
+</head>
+
+<body>
+    <header></header>
+
+    <main class="manage-container">
+        <h2>הזמנות הממתינות לפעולה</h2>
+
+        <div class="manage-toolbar">
+            <input type="search" id="orderSearch" placeholder="חיפוש לפי שם לקוח או מספר הזמנה">
+            <select id="statusFilter" aria-label="סינון לפי סטטוס">
+                <option value="all">כל ההזמנות</option>
+                <option value="pending">ממתינות להכנה</option>
+                <option value="ready">מוכנות</option>
+                <option value="unpaid">לא שולמו</option>
+            </select>
+        </div>
+
+        <p class="summary-text" id="ordersSummary"></p>
+        <div class="table-wrapper" id="ordersContainer"></div>
+    </main>
+
+    <footer></footer>
+
+    <script src="../scripts/data.js"></script>
+    <script src="../scripts/ls.js"></script>
+    <script src="../scripts/services.js"></script>
+    <script src="../scripts/ui.js"></script>
+    <script src="../scripts/header-footer.js"></script>
+    <script src="../scripts/orders.js"></script>
+</body>
+
+</html>
