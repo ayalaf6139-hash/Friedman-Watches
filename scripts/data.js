@@ -97,7 +97,16 @@ const addAllDataToLs = () => {
     }
     if (!localStorage.getItem('users')) {
         localStorage.setItem('users', JSON.stringify(initialUsers));
+    } else if (!localStorage.getItem('initialUsersAdded_v2')) {
+        // אם כבר נשמרו משתמשים לפני כן - עדכון משתמשי הפתיחה לנתונים הנכונים (פעם אחת בלבד)
+        let savedUsers = [];
+        try {
+            savedUsers = JSON.parse(localStorage.getItem('users')) || [];
+        } catch { }
+        const otherUsers = savedUsers.filter(s => !initialUsers.some(u => u.tz === s.tz));
+        localStorage.setItem('users', JSON.stringify([...otherUsers, ...initialUsers]));
     }
+    localStorage.setItem('initialUsersAdded_v2', 'true');
     if (!localStorage.getItem('orders')) {
         localStorage.setItem('orders', JSON.stringify([]));
     }
