@@ -1,3 +1,6 @@
+// כניסה לעמוד מנתקת חיבור קודם שנשאר שמור, כדי שהרשאות של משתמש קודם לא יישארו פעילות
+logoutUserFromLS();
+
 // פונקציה שמטפלת ברישום החיבור ב-LocalStorage וניתוב המשתמש החדש
 const loginUser = (tz, role) => {
     loginUserToLS(tz, role);

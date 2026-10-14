@@ -11,11 +11,16 @@
     color: #bfa77a;
   }
 
+  .form .form-card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
   .form form {
     background: white;
-    width: 45%;
-    max-width: 840px;
-    min-width: 330px;
+    width: 660px;
+    max-width: 100%;
     padding: 36px;
     border-radius: 16px;
     border: 1px solid rgba(212, 175, 55, 0.12);
